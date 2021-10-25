@@ -13,23 +13,32 @@ console.log("squareCont");
 
 // creare un ciclo per inserire 100 quadratini
 
-for ( let i = 1 ; i <= 100; i++) {
+for ( let i = 1 ; i <= 99; i++) {
 
+    let square =document.createElement ("div");
+    square.classList.add ("square");
+    square.append (i);
+    squareCont.append (square);
+    
 // creare un div con classe square   
-    squareCont.innerHTML += `<div class=square>${i}</div>`;
+    // squareCont.innerHTML += `<div class=square>${i}</div>`;
 
 // inserire delle condizioni per modificare square in base al numero ( divisibile per 3 o per 5)
 
     if (i % 3 == 0) {
         squareCont.innerHTML += `<div class="square square-fizz">Fizz</div>`
+
     } 
 
     else if ( i % 5 == 0) {
         squareCont.innerHTML += `<div class="square square-buzz">Buzz</div>`
+        continue;
     }
 
-    else if ((i % 3 == 0) && (i % 5 == 0))
-    squareCont.innerHTML += `<div class="square square-fizzbuzz ">FizzBuzz</div>`
+    else if ((i % 3 == 0) && (i % 5 == 0)){
+        squareCont.innerHTML += `<div class="square square-fizzbuzz ">FizzBuzz</div>`
+    }
+    
 
 }
 
