@@ -26,3 +26,15 @@ h1 {
     align-items: center;
 }
 
+.square-fizz {
+    background-color: #61d2a4;
+}
+
+.square-buzz {
+    background-color: #f9d277;
+}
+
+.square-fizzbuzz {
+    background-color: #de5471;
+}
+
