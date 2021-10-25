@@ -20,16 +20,16 @@ for ( let i = 1 ; i <= 100; i++) {
 
 // inserire delle condizioni per modificare square in base al numero ( divisibile per 3 o per 5)
 
-    if ( i / 3 ) {
-        square.classList.add("square-fizz");
-        square.innerHTML = "Fizz";
+    if (i % 3 == 0) {
+        squareCont.innerHTML += `<div class="square square-fizz">Fizz</div>`
+    } 
 
-    } else if ( i / 5 ) {
-
-        square.classList.add("square-buzz");
-        square.innerHTML = "Buzz";
+    else if ( i % 5 == 0) {
+        squareCont.innerHTML += `<div class="square square-buzz">Buzz</div>`
     }
 
+    else if ((i % 3 == 0) && (i % 5 == 0))
+    squareCont.innerHTML += `<div class="square square-fizzbuzz ">FizzBuzz</div>`
 
 }
 
