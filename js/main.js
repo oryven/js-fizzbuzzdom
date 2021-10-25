@@ -9,11 +9,27 @@ e per i valori che sono sia multipli di 3 che di 5.
 // creare variabile 
 
 const squareCont = document.getElementById ("container");
-console.log("quareCont");
+console.log("squareCont");
 
-// creare un ciclio per inserire 100 quadratini
+// creare un ciclo per inserire 100 quadratini
 
 for ( let i = 1 ; i <= 100; i++) {
+
+// creare un div con classe square   
     squareCont.innerHTML += `<div class=square>${i}</div>`;
+
+// inserire delle condizioni per modificare square in base al numero ( divisibile per 3 o per 5)
+
+    if ( i / 3 ) {
+        square.classList.add("square-fizz");
+        square.innerHTML = "Fizz";
+
+    } else if ( i / 5 ) {
+
+        square.classList.add("square-buzz");
+        square.innerHTML = "Buzz";
+    }
+
+
 }
 
