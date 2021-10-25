@@ -1,0 +1,28 @@
+body {
+    background-color: #183a4a;
+    text-align: center;
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+}
+
+.square {
+    height: 100px;
+    width: calc(100% / 7 - 10px );
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #1389B2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
