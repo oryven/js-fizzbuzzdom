@@ -19,26 +19,29 @@ for ( let i = 1 ; i <= 99; i++) {
     square.classList.add ("square");
     square.append (i);
     squareCont.append (square);
+    console.log("squareCont");
     
 // creare un div con classe square   
     // squareCont.innerHTML += `<div class=square>${i}</div>`;
 
 // inserire delle condizioni per modificare square in base al numero ( divisibile per 3 o per 5)
+    if ((i % 3 == 0) && (i % 5 == 0)){
+    // squareCont.innerHTML += `<div class="square square-fizzbuzz ">FizzBuzz</div>`
+    square.classList.add ("square-fizzbuzz");
+    square.innerHTML = "FizzBuzz";
+    }
 
-    if (i % 3 == 0) {
-        squareCont.innerHTML += `<div class="square square-fizz">Fizz</div>`
-
+    else if (i % 3 == 0) {
+        // squareCont.innerHTML += `<div class="square square-fizz">Fizz</div>`
+    square.classList.add ("square-fizz");
+    square.innerHTML = "Fizz";
     } 
 
     else if ( i % 5 == 0) {
-        squareCont.innerHTML += `<div class="square square-buzz">Buzz</div>`
-        continue;
+        // squareCont.innerHTML += `<div class="square square-buzz">Buzz</div>`
+        square.classList.add ("square-buzz");
+        square.innerHTML = "Buzz";
     }
-
-    else if ((i % 3 == 0) && (i % 5 == 0)){
-        squareCont.innerHTML += `<div class="square square-fizzbuzz ">FizzBuzz</div>`
-    }
-    
 
 }
 
